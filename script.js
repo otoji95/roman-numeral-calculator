@@ -24,3 +24,16 @@ function convertRomanToNumber(input) {
   }
   return result;
 }
+
+function handleClick(e) {
+  let result = convertRomanToNumber(input.value);
+  para.innerText = String(result);
+}
+
+const input = document.getElementById("number");
+const button = document.getElementById("convert-btn");
+const resultsDiv = document.getElementById("output");
+const para = document.createElement("p");
+resultsDiv.appendChild(para);
+
+button.addEventListener("click", handleClick);
